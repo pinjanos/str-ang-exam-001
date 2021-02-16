@@ -6,7 +6,7 @@ import { Hero } from '../model/hero';
 })
 export class HeroServiceService {
 
-  private list: Hero[] = [
+  herolist: Hero[] = [
     {
       id: 1,
       name: 'Fityethányó',
@@ -16,19 +16,19 @@ export class HeroServiceService {
     {
       id: 2,
       name: 'Rütyütyü',
-      superPower: 'rütyögg',
+      superPower: 'rüttyöggés',
       address: 'Bújtat-lak'
     },
     {
       id: 3,
       name: 'Hejehuja',
-      superPower: 'haj',
+      superPower: 'hajaz',
       address: 'Hajmási'
     },
     {
       id: 4,
-      name: 'Megverő',
-      superPower: 'erősen gyenge',
+      name: 'Megseverő',
+      superPower: 'erősengyenge',
       address: 'Fújta-tó'
     },
     {
@@ -40,4 +40,8 @@ export class HeroServiceService {
   ]
 
   constructor() { }
+
+  getAll(): Hero[] {
+    return this.herolist;
+  };
 }
